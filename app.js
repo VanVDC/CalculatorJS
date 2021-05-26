@@ -8,8 +8,8 @@ let valueStrInMemory = null;
 let operatorInMemory = null;
 
 //functions============================
+//get funtions
 const getValueAsStr = () => {
-  // const currentValueStr = valueEl.textContent;
   return valueEl.textContent.split(',').join('');
 };
 
@@ -31,6 +31,7 @@ const setStrAsValue = (valueStr) => {
   }
   valueEl.textContent = parseFloat(valueStr).toLocaleString();
 };
+
 const handleNumberClick = (numStr) => {
   const currentValueStr = getValueAsStr();
 
@@ -40,6 +41,8 @@ const handleNumberClick = (numStr) => {
     setStrAsValue(currentValueStr + numStr);
   }
 };
+
+// operation funtions
 
 const getResultOfOperationAsStr = () => {
   const currentValueNum = getValueAsNum();
