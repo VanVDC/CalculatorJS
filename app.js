@@ -46,7 +46,7 @@ const numberElArray = [
 let valueStrInMemory = null;
 let operatorInMemory = null;
 
-//functions
+//functions============================
 const getValueAsStr = () => {
   // const currentValueStr = valueEl.textContent;
   return valueEl.textContent.split(',').join('');
@@ -112,7 +112,7 @@ const handleOperatorclick = (operation) => {
   setStrAsValue = '0';
 };
 
-//add event listeners to functions
+//add event listeners to functions=====================
 acEL.addEventListener('click', () => {
   setStrAsValue('0');
   valueStrInMemory = null;
@@ -141,7 +141,7 @@ percentEL.addEventListener('click', () => {
   operatorInMemory = null;
 });
 
-//add event listeners to operators
+//add event listeners to operators==========================
 additionEL.addEventListener('click', () => {
   handleOperatorclick('addition');
 });
@@ -163,7 +163,7 @@ equalEL.addEventListener('click', () => {
   }
 });
 
-// add event listeners to numbers and decimal
+// add event listeners to numbers and decimal=============
 for (let i = 0; i < numberElArray.length; i++) {
   const numberEL = numberElArray[i];
   numberEL.addEventListener('click', () => {
@@ -179,7 +179,7 @@ decimalEL.addEventListener('click', () => {
   }
 });
 
-//get the time
+//get the time===================
 // set up the time
 
 const updateTime = () => {
