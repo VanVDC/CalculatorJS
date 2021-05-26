@@ -1,7 +1,7 @@
 //DOM Elements
 //time
-const hourEl = document.querySelector('.hour');
-const minuteEl = document.querySelector('.minute');
+// const hourEl = document.querySelector('.hour');
+// const minuteEl = document.querySelector('.minute');
 
 //buttons
 const valueEl = document.querySelector('.value');
@@ -10,37 +10,37 @@ const acEL = document.querySelector('.ac');
 const pmEL = document.querySelector('.pm');
 const percentEL = document.querySelector('.percent');
 
-const divisionEL = document.querySelector('.division');
-const additionEL = document.querySelector('.addition');
-const subtractionEL = document.querySelector('.subtraction');
-const multiplicationEL = document.querySelector('.multiplication');
-const equalEL = document.querySelector('.equal');
+// const divisionEL = document.querySelector('.division');
+// const additionEL = document.querySelector('.addition');
+// const subtractionEL = document.querySelector('.subtraction');
+// const multiplicationEL = document.querySelector('.multiplication');
+// const equalEL = document.querySelector('.equal');
 
-const decimalEL = document.querySelector('.decimal');
+// const decimalEL = document.querySelector('.decimal');
 
-const number1EL = document.querySelector('.number-1');
-const number2EL = document.querySelector('.number-2');
-const number3EL = document.querySelector('.number-3');
-const number4EL = document.querySelector('.number-4');
-const number5EL = document.querySelector('.number-5');
-const number6EL = document.querySelector('.number-6');
-const number7EL = document.querySelector('.number-7');
-const number8EL = document.querySelector('.number-8');
-const number9EL = document.querySelector('.number-9');
-const number0EL = document.querySelector('.number-0');
+// const number1EL = document.querySelector('.number-1');
+// const number2EL = document.querySelector('.number-2');
+// const number3EL = document.querySelector('.number-3');
+// const number4EL = document.querySelector('.number-4');
+// const number5EL = document.querySelector('.number-5');
+// const number6EL = document.querySelector('.number-6');
+// const number7EL = document.querySelector('.number-7');
+// const number8EL = document.querySelector('.number-8');
+// const number9EL = document.querySelector('.number-9');
+// const number0EL = document.querySelector('.number-0');
 
-const numberElArray = [
-  number0EL,
-  number1EL,
-  number2EL,
-  number3EL,
-  number4EL,
-  number5EL,
-  number6EL,
-  number7EL,
-  number8EL,
-  number9EL,
-];
+// const numberElArray = [
+//   number0EL,
+//   number1EL,
+//   number2EL,
+//   number3EL,
+//   number4EL,
+//   number5EL,
+//   number6EL,
+//   number7EL,
+//   number8EL,
+//   number9EL,
+// ];
 
 //variables
 let valueStrInMemory = null;
@@ -142,57 +142,57 @@ percentEL.addEventListener('click', () => {
 });
 
 //add event listeners to operators==========================
-additionEL.addEventListener('click', () => {
-  handleOperatorclick('addition');
-});
-subtractionEL.addEventListener('click', () => {
-  handleOperatorclick('subtraction');
-});
-multiplicationEL.addEventListener('click', () => {
-  handleOperatorclick('multiplication');
-});
-divisionEL.addEventListener('click', () => {
-  handleOperatorclick('division');
-});
+// additionEL.addEventListener('click', () => {
+//   handleOperatorclick('addition');
+// });
+// subtractionEL.addEventListener('click', () => {
+//   handleOperatorclick('subtraction');
+// });
+// multiplicationEL.addEventListener('click', () => {
+//   handleOperatorclick('multiplication');
+// });
+// divisionEL.addEventListener('click', () => {
+//   handleOperatorclick('division');
+// });
 
-equalEL.addEventListener('click', () => {
-  if (valueStrInMemory) {
-    setStrAsValue(getResultOfOperationAsStr());
-    valueStrInMemory = null;
-    operatorInMemory = null;
-  }
-});
+// equalEL.addEventListener('click', () => {
+//   if (valueStrInMemory) {
+//     setStrAsValue(getResultOfOperationAsStr());
+//     valueStrInMemory = null;
+//     operatorInMemory = null;
+//   }
+// });
 
 // add event listeners to numbers and decimal=============
-for (let i = 0; i < numberElArray.length; i++) {
-  const numberEL = numberElArray[i];
-  numberEL.addEventListener('click', () => {
-    handleNumberClick(i.toString());
-  });
-}
+// for (let i = 0; i < numberElArray.length; i++) {
+//   const numberEL = numberElArray[i];
+//   numberEL.addEventListener('click', () => {
+//     handleNumberClick(i.toString());
+//   });
+// }
 
-decimalEL.addEventListener('click', () => {
-  const currentValueStr = getValueAsStr();
+// decimalEL.addEventListener('click', () => {
+//   const currentValueStr = getValueAsStr();
 
-  if (!currentValueStr.includes('.')) {
-    setStrAsValue(currentValueStr + '.');
-  }
-});
+//   if (!currentValueStr.includes('.')) {
+//     setStrAsValue(currentValueStr + '.');
+//   }
+// });
 
 //get the time===================
 // set up the time
 
-const updateTime = () => {
-  const currentTime = new Date();
-  let currentHour = currentTime.getHours();
-  const currentMinute = currentTime.getMinutes();
+// const updateTime = () => {
+//   const currentTime = new Date();
+//   let currentHour = currentTime.getHours();
+//   const currentMinute = currentTime.getMinutes();
 
-  if (currentHour > 12) {
-    currentHour -= 12;
-  }
+//   if (currentHour > 12) {
+//     currentHour -= 12;
+//   }
 
-  hourEl.textContent = currentHour.toString();
-  minuteEl.textContent = currentMinute.toString().padStart(2, '0');
-};
-setInterval(updateTime, 1000);
-updateTime();
+//   hourEl.textContent = currentHour.toString();
+//   minuteEl.textContent = currentMinute.toString().padStart(2, '0');
+// };
+// setInterval(updateTime, 1000);
+// updateTime();
