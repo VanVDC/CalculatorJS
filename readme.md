@@ -19,3 +19,10 @@
 - .value set the style for the display
 - .buttons-container set the style for buttong, .button.function, .button.operator, and .button.number-0
 - .bottom create the line
+
+## JS
+
+- get all the DOM Elements
+- create modules folder
+  1. create updateTime function, create setInterval to update every 1sec
+-
