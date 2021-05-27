@@ -10,3 +10,5 @@
 - add value for the display
 - add button-container for all the buttons
 - add bottom container for the bottom line
+
+## CSS
