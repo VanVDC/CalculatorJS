@@ -36,6 +36,11 @@ const setStrAsValue = (valueStr) => {
 
 const handleNumberClick = (numStr) => {
   const currentValueStr = getValueAsStr();
+  if (currentValueStr.length > 5) {
+    valueEl.style.fontSize = `${100 - currentValueStr.length * 3}px`;
+  } else {
+    valueEl.style.fontSize = '130px';
+  }
 
   if (currentValueStr === '0') {
     setStrAsValue(numStr);
