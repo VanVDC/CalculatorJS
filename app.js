@@ -10,6 +10,8 @@ let operatorInMemory = null;
 //functions============================
 //get funtions
 const getValueAsStr = () => {
+  console.log('getValueAsStr() ', valueEl.textContent.split(',').join(''));
+
   return valueEl.textContent.split(',').join('');
 };
 
@@ -58,6 +60,7 @@ const getResultOfOperationAsStr = () => {
     newValueNum = valueNumInMemory / currentValueNum;
   }
 
+  console.log('newValueNum ', newValueNum);
   return newValueNum.toString();
 };
 
