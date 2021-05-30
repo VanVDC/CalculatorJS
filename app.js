@@ -36,12 +36,15 @@ const setStrAsValue = (valueStr) => {
 
 const handleNumberClick = (numStr) => {
   const currentValueStr = getValueAsStr();
-  if (currentValueStr.length > 5) {
-    valueEl.style.fontSize = `${100 - currentValueStr.length + 5}px`;
-  } else if (currentValueStr.length > 11) {
-    valueEl.style.fontSize = `${100 - currentValueStr.length * 4}px`;
-  } else if (currentValueStr.length > 14) {
-    valueEl.style.fontSize = `${100 - currentValueStr.length * 6}px`;
+  console.log('len ', currentValueStr.length);
+  if (currentValueStr.length > 5 && currentValueStr.length < 10) {
+    valueEl.style.fontSize = `${100 - (currentValueStr.length + 15)}px`;
+  } else if (currentValueStr.length >= 10 && currentValueStr.length < 14) {
+    valueEl.style.fontSize = `${60}px`;
+  } else if (currentValueStr.length >= 14 && currentValueStr.length < 16) {
+    valueEl.style.fontSize = `${50}px`;
+  } else if (currentValueStr.length >= 16 && currentValueStr.length < 100) {
+    valueEl.style.fontSize = `${25}px`;
   } else {
     valueEl.style.fontSize = '130px';
   }
