@@ -38,6 +38,8 @@ const handleNumberClick = (numStr) => {
   const currentValueStr = getValueAsStr();
   if (currentValueStr.length > 5) {
     valueEl.style.fontSize = `${100 - currentValueStr.length * 3}px`;
+  } else if (currentValueStr.length > 12) {
+    valueEl.style.fontSize = `${100 - currentValueStr.length * 5}px`;
   } else {
     valueEl.style.fontSize = '130px';
   }
